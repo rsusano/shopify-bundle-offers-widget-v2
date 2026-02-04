@@ -1,0 +1,16 @@
+{%- comment -%}
+  Optional: Bundle Offers Widget v2 – Theme cart display adapter
+
+  Include this snippet once in your theme (e.g. in layout/theme.liquid or inside your cart drawer section)
+  if your theme uses the same DOM structure as the widget’s built-in cart display logic.
+
+  When this element is present, the widget will try to update:
+  - Cart drawer heading (e.g. #cart-drawer-heading, .cart-drawer__heading)
+  - Header cart bubble count ([ref="cartBubbleCount"], .cart-bubble__text-count)
+  - Cart drawer empty state (cart-drawer-component, .cart-drawer)
+
+  If your theme uses different selectors or a cart drawer app, do NOT include this snippet.
+  Instead, listen for the `bundle:cart-added` event and update your own UI.
+  See docs/cart-drawer-integration.md.
+{%- endcomment -%}
+<div data-bundle-theme-cart hidden aria-hidden="true"></div>

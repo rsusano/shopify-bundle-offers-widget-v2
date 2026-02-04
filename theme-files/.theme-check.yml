@@ -1,0 +1,14 @@
+# Theme Check for the bundle-offers v2 package (theme-files only).
+# These files are meant to be copied into a client theme; many variables
+# are passed at render time and snippets are referenced by the block in the theme.
+extends: theme-check:recommended
+
+# Snippet is referenced by product-bundle-offers.liquid when block is used in a theme.
+UnusedSnippet:
+  enabled: false
+OrphanedSnippet:
+  enabled: false
+
+# Variables (show_price, show_guarantee, etc.) are passed via render 'snippet', var: value.
+UndefinedObject:
+  enabled: false

@@ -1,0 +1,73 @@
+{%- comment -%}
+  Enhanced Add to Cart button – shows dynamic bundle price via bundle:selected event.
+  Requires: enhanced-add-to-cart.js asset.
+  If your theme does not support 'inline_asset_content', replace the icon with a simple checkmark or remove the icon span.
+{%- endcomment -%}
+{%- liquid
+  assign default_add_to_cart_text = 'Add to cart'
+-%}
+
+<enhanced-add-to-cart-component
+  class="enhanced-add-to-cart-wrapper"
+  data-show-price="{{ show_price }}"
+  data-show-guarantee="{{ show_guarantee }}"
+  data-guarantee-text="{{ guarantee_text | escape }}"
+  data-separator="{{ separator | escape }}"
+>
+  <button
+    id="{{ id }}"
+    type="submit"
+    name="add"
+    class="button enhanced-add-to-cart {{ class }}"
+    {% unless can_add_to_cart %}disabled{% endunless %}
+  >
+    <span class="enhanced-atc-content">
+      <span class="enhanced-atc-main">
+        <span class="enhanced-atc-text">{{ add_to_cart_text | default: default_add_to_cart_text }}</span>
+        {% if show_price %}
+          {% if separator != blank %}<span class="enhanced-atc-separator">{{ separator }}</span>{% endif %}
+          <span class="enhanced-atc-prices">
+            <span class="enhanced-atc-price" data-enhanced-atc-price>{{ display_price | money }}</span>
+            {% if show_compare_price and display_compare_price and display_compare_price > display_price %}
+              <span class="enhanced-atc-compare-price" data-enhanced-atc-compare-price>{{ display_compare_price | money }}</span>
+            {% endif %}
+          </span>
+        {% endif %}
+      </span>
+      {% if show_guarantee and guarantee_text != blank %}
+        <span class="enhanced-atc-guarantee">{{ guarantee_text }}</span>
+      {% endif %}
+    </span>
+    <span aria-hidden="true" class="enhanced-atc-added">
+      <span class="enhanced-atc-icon--added">✓</span>
+      <span class="enhanced-atc-added-text">{{ 'actions.added' | t | default: 'Added!' }}</span>
+    </span>
+  </button>
+</enhanced-add-to-cart-component>
+
+<script src="{{ 'enhanced-add-to-cart.js' | asset_url }}" defer></script>
+
+<style>
+  .enhanced-add-to-cart-wrapper { width: 100%; }
+  .enhanced-add-to-cart-wrapper .enhanced-add-to-cart,
+  .enhanced-add-to-cart {
+    width: 100%;
+    background-color: var(--atc-bg-color, #2F7A5E);
+    color: var(--atc-text-color, #fff);
+    border: none;
+    border-radius: var(--atc-border-radius, 8px);
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .enhanced-add-to-cart:disabled { opacity: 0.6; cursor: not-allowed; }
+  .enhanced-atc-content { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+  .enhanced-atc-main { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .enhanced-atc-compare-price { text-decoration: line-through; opacity: 0.8; }
+  .enhanced-atc-added { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; opacity: 0; }
+  .atc-added .enhanced-atc-content { opacity: 0; }
+  .atc-added .enhanced-atc-added { opacity: 1; }
+</style>
