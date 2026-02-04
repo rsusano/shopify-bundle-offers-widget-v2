@@ -1,4 +1,4 @@
-# Theme Check for the bundle-offers v2 package (theme-files only).
+# Theme Check for the bundle-offers v2 package.
 # These files are meant to be copied into a client theme; many variables
 # are passed at render time and snippets are referenced by the block in the theme.
 extends: theme-check:recommended

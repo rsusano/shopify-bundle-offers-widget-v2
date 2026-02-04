@@ -4,13 +4,13 @@ Install the Bundle Offers Widget v2 on any Shopify theme (Online Store 2.0).
 
 ## 1. Copy theme files
 
-Copy the contents of `theme-files/` into your theme root so that:
+Copy the contents of this repo into your theme root so that:
 
-- `theme-files/blocks/product-bundle-offers.liquid` → `blocks/product-bundle-offers.liquid`
-- `theme-files/assets/bundle-offers-v2.js` → `assets/bundle-offers-v2.js`
-- `theme-files/assets/enhanced-add-to-cart.js` → `assets/enhanced-add-to-cart.js`
-- `theme-files/snippets/add-to-cart-button-enhanced.liquid` → `snippets/add-to-cart-button-enhanced.liquid` (optional, for dynamic price on button)
-- `theme-files/snippets/bundle-cart-adapter.liquid` → `snippets/bundle-cart-adapter.liquid` (optional; see [Cart drawer integration](./cart-drawer-integration.md))
+- `blocks/product-bundle-offers.liquid` → your theme `blocks/`
+- `assets/bundle-offers-v2.js` → your theme `assets/`
+- `assets/enhanced-add-to-cart.js` → your theme `assets/`
+- `snippets/add-to-cart-button-enhanced.liquid` → your theme `snippets/` (optional, for dynamic price on button)
+- `snippets/bundle-cart-adapter.liquid` → your theme `snippets/` (optional; see [Cart drawer integration](./cart-drawer-integration.md))
 
 ## 2. Add the block to your product template
 
