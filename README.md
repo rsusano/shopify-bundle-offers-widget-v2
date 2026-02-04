@@ -2,7 +2,7 @@
 
 A **theme-agnostic** bundle widget for Shopify – dynamic pricing, free gifts, and an enhanced add-to-cart button. Works with **any Online Store 2.0 theme** and **any cart drawer** (native, custom, or app). Production-ready and easy to install on client stores.
 
-`Shopify` `Liquid` `JavaScript`
+[![Shopify Compatible](https://img.shields.io/badge/Shopify-Compatible-96bf48?logo=shopify&logoColor=white&labelColor=414042)](https://www.shopify.com) [![Liquid Template](https://img.shields.io/badge/Liquid-Template-96bf48?labelColor=414042)](https://shopify.dev/docs/api/liquid) [![JavaScript ES6+](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black&labelColor=414042)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
 
