@@ -12,7 +12,7 @@ A **theme-agnostic** bundle widget for Shopify – dynamic pricing, free gifts, 
 
 | Bundle widget on product page | Enhanced add-to-cart button |
 |-------------------------------|-----------------------------|
-| *[Screenshot or GIF: bundle options with radio buttons, prices, free gift indicators]* | *[Screenshot: button with dynamic price and guarantee text]* |
+| (./docs/images/Bundle%20widget%20Desktop.png) | (./docs/images/Add-to-cart-enhanced%20(1).png) |
 
 **Demo video**  
 *Optional: link to a short screen recording – e.g. “User selects bundle → price updates → adds to cart → cart drawer opens.”*
